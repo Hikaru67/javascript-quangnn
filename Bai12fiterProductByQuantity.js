@@ -7,7 +7,7 @@ listProduct[7].delete();
 listProduct[6].delete();
 
 function filterProductByQuantity(listProduct){
-    return listProduct.filter(value => value.quantity > 5 && !value.isDelete)
+    return listProduct.filter(value => !value.isDelete && value.quantity > 5)
 }
 
 function filterProductByQuantity2(listProduct){

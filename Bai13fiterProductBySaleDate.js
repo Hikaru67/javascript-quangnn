@@ -8,7 +8,7 @@ listProduct[7].delete();
 listProduct[6].delete();
 
 function filterProductBySaleDate(listProduct){
-    return listProduct.filter(value => value.saleDate > now && !value.isDelete)
+    return listProduct.filter(value => !value.isDelete && value.saleDate > now )
 }
 
 function filterProductBySaleDate2(listProduct){
