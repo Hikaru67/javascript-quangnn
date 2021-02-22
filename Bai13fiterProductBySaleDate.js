@@ -7,9 +7,10 @@ listProduct[5].delete();
 listProduct[7].delete();
 listProduct[6].delete();
 
-function filterProductBySaleDate(listProduct){
-    return listProduct.filter(value => !value.isDelete && value.saleDate > now )
-}
+let filterProductBySaleDate = (listProduct) => listProduct.filter(value => !value.isDelete && value.saleDate > now );
+// use es6
+// return array product have saleDate>Date.now() and isn't deleted
+
 
 function filterProductBySaleDate2(listProduct){
     let list = []; let j = 0;
@@ -21,6 +22,9 @@ function filterProductBySaleDate2(listProduct){
 
     return list;
 }
+
+// use for
+// return array product have saleDate>Date.now() and isn't deleted
 
 console.log(filterProductBySaleDate(listProduct));
 console.log('\n');

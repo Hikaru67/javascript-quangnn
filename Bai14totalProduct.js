@@ -6,7 +6,7 @@ listProduct[5].delete();
 listProduct[7].delete();
 listProduct[6].delete();
 
-function totalProduct(listProduct){
+let totalProduct = (listProduct) => {
     let total = 0;
     return listProduct.reduce(function (total, value) {
         if(!value.isDelete){
@@ -15,6 +15,8 @@ function totalProduct(listProduct){
             return total;
     }, total)
 }
+// use es6 (reduce)
+// return sum quantity of product which isn't deleted
 
 function totalProduct2(listProduct){
     let total = 0;
@@ -26,6 +28,8 @@ function totalProduct2(listProduct){
 
     return total;
 }
+// use for
+// return sum quantity of product which isn't deleted
 
 console.log(totalProduct(listProduct));
 console.log('\n');

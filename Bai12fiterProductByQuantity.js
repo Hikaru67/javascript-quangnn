@@ -6,9 +6,11 @@ listProduct[5].delete();
 listProduct[7].delete();
 listProduct[6].delete();
 
-function filterProductByQuantity(listProduct){
-    return listProduct.filter(value => !value.isDelete && value.quantity > 5)
-}
+
+
+let filterProductByQuantity = (listProduct) => listProduct.filter(value => !value.isDelete && value.quantity > 0);
+// use es6
+// return array product have quantity>0 and isn't deleted
 
 function filterProductByQuantity2(listProduct){
     let list = []; let j = 0;
@@ -20,6 +22,10 @@ function filterProductByQuantity2(listProduct){
 
     return list;
 }
+
+// use for
+// return array product have quantity>0 and isn't deleted
+
 console.log(filterProductByQuantity(listProduct));
 console.log('\n');
 console.log(filterProductByQuantity2(listProduct));
